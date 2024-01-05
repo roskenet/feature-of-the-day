@@ -52,3 +52,15 @@ You want a scripting laguage? Here we go:
 kotlin HelloWorld.kts
 ```
 
+## Use the REPL
+(Read Evaluate Print Loop)
+
+```shell
+❯ kotlin
+Welcome to Kotlin version 1.9.10 (JRE 21+35)
+Type :help for help, :quit for quit
+>>> println("Hello World!")
+Hello World!
+>>> :quit
+```
+
