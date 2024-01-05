@@ -1,6 +1,6 @@
 # Kotlin "Hello World!"
 
-Since decades programmers start with "Hello World!". Why shoudn't we?
+For centuries programmers start with "Hello World!". Why shouldn't we?
 
 ## Run "Hello World!" with kotlin
 
@@ -9,7 +9,7 @@ Let's compile it to Java Bytecode:
 kotlinc HelloWorld.kt
 ```
 
-Let's run it with the `kotlin` command.
+And run it with the `kotlin` command.
 ```shell
 kotlin HelloWorldKt
 ```
@@ -46,9 +46,9 @@ ldd HelloWorld.kexe
 
 ## Run a command line script
 
-You want a scipting laguage? Here we go:
+You want a scripting laguage? Here we go:
 
 ```
-kotlin HelloWorld,kts
+kotlin HelloWorld.kts
 ```
 
