@@ -29,7 +29,8 @@ java -jar HelloWorld.jar
 
 ## Compile to machine code
 
-Kotlin can be compiled directly to native machine code
+Kotlin can be compiled directly to native machine code on many architectures:
+
 ```shell
 kotlinc-native HelloWorld.kt -o HelloWorld
 ```
