@@ -1,3 +1,3 @@
---| A second session for transactions
+--| A second session to show transactions
 
-SELECT * FROM idx_test;
+SELECT * FROM idx_test ORDER BY id;
