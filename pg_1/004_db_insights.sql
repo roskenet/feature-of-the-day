@@ -19,3 +19,4 @@ ORDER BY pg_total_relation_size(relid) DESC;
 SELECT indexrelname AS index_name,
        pg_size_pretty(pg_relation_size(quote_ident(indexrelname))) as size
 FROM pg_catalog.pg_stat_user_indexes ORDER BY pg_relation_size(quote_ident(indexrelname)) DESC;
+
