@@ -2,7 +2,7 @@
 SET JIT=OFF;
 
 EXPLAIN ANALYSE
-SELECT * FROM idx_test WHERE id=1;
+SELECT *  FROM idx_test WHERE id=1;
 
 EXPLAIN ANALYZE
 SELECT * from idx_test LIMIT 10;

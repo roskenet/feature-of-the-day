@@ -16,6 +16,7 @@ FROM pg_catalog.pg_stat_user_indexes ORDER BY pg_relation_size(quote_ident(index
 
 SELECT * FROM pg_stat_database;
 SELECT * FROM pg_stat_user_tables;
+SELECT * FROM pg_statio_user_tables;
 
 --| Show usage of seq_scan / idx_scan
 SELECT schemaname, relname, seq_scan, seq_tup_read,
