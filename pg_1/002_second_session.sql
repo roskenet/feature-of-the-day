@@ -1,3 +1,3 @@
---| A second session to show transactions
+--| A second session to show transactions and MVCC
 
-SELECT * FROM idx_test ORDER BY id;
+SELECT xmin, xmax, * FROM test_table order by id LIMIT 10;

@@ -1,32 +1,32 @@
 --| Create test db
 
-DROP TABLE IF EXISTS idx_test;
-CREATE TABLE idx_test (id SERIAL, name TEXT, active BOOLEAN DEFAULT true);
+DROP TABLE IF EXISTS test_table;
+CREATE TABLE test_table (id SERIAL, name TEXT, active BOOLEAN DEFAULT true);
 
-INSERT INTO idx_test (name, active) SELECT 'Charles', false
+INSERT INTO test_table (name, active) SELECT 'Charles', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'Camilla', false
+INSERT INTO test_table (name, active) SELECT 'Camilla', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'William', false
+INSERT INTO test_table (name, active) SELECT 'William', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'Kate', false
+INSERT INTO test_table (name, active) SELECT 'Kate', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'Harry', false
+INSERT INTO test_table (name, active) SELECT 'Harry', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'Meghan', false
+INSERT INTO test_table (name, active) SELECT 'Meghan', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'George', false
+INSERT INTO test_table (name, active) SELECT 'George', false
    FROM generate_series(1, 2000000);
-INSERT INTO idx_test (name, active) SELECT 'Charlotte', false
+INSERT INTO test_table (name, active) SELECT 'Charlotte', false
    FROM generate_series(1, 2000000);
 
-SELECT * FROM idx_test;
+SELECT * FROM test_table where active=true;
 
 BEGIN;
-UPDATE idx_test SET name = 'Louis', active = false WHERE id%3=0;
-SELECT * FROM idx_test;
+UPDATE test_table SET name = 'Louis', active = false WHERE id%3=0;
+SELECT xmin, xmax, * FROM test_table order by id LIMIT 10;
 ROLLBACK;
 -- COMMIT;
 
-INSERT INTO idx_test (name)
-    VALUES ('Antonio'), ('Ivan'), ('Lucas'), ('Michal'), ('Abd'), ('Taras'), ('Rebecca');
+INSERT INTO test_table (name)
+    VALUES ('Antonio'), ('Ivan'), ('Lucas'), ('Michal'), ('Abd'), ('Taras'), ('Rebecca'), ('Amine'), ('Manuka');
