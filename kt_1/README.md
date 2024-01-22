@@ -1,6 +1,9 @@
 # Kotlin "Hello World!"
 
 For centuries programmers start with "Hello World!". Why shouldn't we?
+## Run "Hello World!" online
+
+https://play.kotlinlang.org/
 
 ## Run "Hello World!" with kotlin
 
