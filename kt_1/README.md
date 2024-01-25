@@ -2,9 +2,9 @@
 
 For centuries programmers start with "Hello World!". Why shouldn't we?
 
-## Run it online:
+## Run "Hello World!" online
 
-https://play.kotlinlang.org
+https://play.kotlinlang.org/
 
 ## Use the REPL
 (Read Evaluate Print Loop)

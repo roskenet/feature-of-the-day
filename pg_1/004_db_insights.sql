@@ -23,3 +23,4 @@ ORDER BY seq_tup_read DESC LIMIT 25;
 
 SELECT * FROM pg_stat_database;
 SELECT * FROM pg_stat_user_tables WHERE schemaname = 'public';
+SELECT * FROM pg_statio_user_tables;
