@@ -1,5 +1,4 @@
 \documentclass[DIV=12,11pt,a4paper]{article}
-%\usepackage[french]{babel}
 \usepackage[LY1]{fontenc}
 \usepackage[fullfamily,opticals,mathlf,minionint]{MinionPro}
 \usepackage{textcomp}
@@ -20,43 +19,28 @@ letterspace=50, % well spaced smallcaps
 \usepackage{courier}
 
 \renewcommand{\sfdefault}{MyriadPro-onum-pnum}
-%\usepackage{amsmath}
-%\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 %\usepackage{amssymb}
 
-% Seite vergroessern?
 \usepackage[ a4paper, marginparsep=10mm, marginparwidth=60mm, left=20mm, right=80mm ]{geometry}
 
 \newcommand{\sfmarginpar}[1]{{\marginpar{\usefont{LY1}{MyriadPro-onum-pnum}{c}{n}\selectfont}#1}} 
 \newcommand{\mysffont}{\usefont{LY1}{MyriadPro-onum-pnum}{c}{n}\selectfont}
 
-%\newcommand{\vocab}[2]{\marginpar{\small \mysffont \textbf{#1} #2}}
 \newcommand{\flxmarginpar}[1]{\marginpar{\small \mysffont {#1}}}
 
 \usepackage[sf,sl,outermarks,noindentafter,nobottomtitles]{titlesec}
-
-%\titleformat{\chapter}[display]
-
-% {\filleft\huge\sffamily} 
-%{\filleft\huge\usefont{LY1}{MyriadPro-onum-pnum}{c}{n}\selectfont} 
-
-%{\fontsize{100pt}{90pt}\selectfont\thechapter}
-%{-2ex} %is vertical space in [display] mode
-%{\vspace{1ex}} 
-%[\vspace{1ex}]
 
 \begin{document}
 
 \lstset{
 language=C,                             % Code langugage
 basicstyle=\ttfamily\footnotesize,                   % Code font, Examples: \footnotesize, \ttfamily
-%keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
-%commentstyle=\color{gray},              % Comments font
 %numbers=left,                           % Line nums position
 %numberstyle=\tiny,                      % Line-numbers fonts
 stepnumber=1,                           % Step between two line-numbers
 numbersep=5pt,                          % How far are line-numbers from code
-%backgroundcolor=\color{lightlightgray}, % Choose background color
 frame=none,                             % A frame around the code
 tabsize=2,                              % Default tab size
 captionpos=b,                           % Caption-position = bottom
