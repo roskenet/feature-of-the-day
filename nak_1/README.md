@@ -22,7 +22,7 @@ Change the Docker base image in `Dockerfile` to `FROM registry.opensource.zalan.
 2. Running on bare docker 
 
 Since the gradle build and run commands take a long time to start up. I pre-built the docker images (see here in subdirectory `build`).
-`cd` into `docker` adjust the nakadi api port and: 
+`cd` into `docker` adjust the nakadi api port in the docker-compose.yaml and: 
 
 ```shell
 docker-compose up -d
