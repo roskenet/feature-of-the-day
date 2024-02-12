@@ -69,4 +69,36 @@ kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
 
+# Try it:
+
+1. Post an event type:
+```shell
+curl -v -XPOST http://<YOUR_NAKADI>/event-types -H "Content-type: application/json" -d '{
+   "name": "order.ORDER_RECEIVED",
+   "owning_application": "order-service",
+   "category": "undefined",
+   "schema": {
+   "type": "json_schema",
+   "schema": "{ \"additionalProperties\": true }"
+   }
+}'
+```
+
+2. Listen to it:
+```shell
+curl -v http://<YOUR_NAKADI>/event-types/order.ORDER_RECEIVED/events
+
+```
+
+3. Publish one:
+```shell
+curl -v -XPOST http://<YOUR_NAKADI>/event-types/order.ORDER_RECEIVED/events \
+ -H "Content-type: application/json" \
+ -d '[{
+    "order_number": "24873243241"
+  }, {
+    "order_number": "24873243242"
+  }]'
+```
+
 No animals were harmed during the making of this tutorial.
