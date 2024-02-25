@@ -1,0 +1,12 @@
+# This is the default config. It will always be read first
+# The values will be overridden by more special profiles.
+
+logging:
+  level:
+    root: error
+
+# The default greeting is American
+greeting:
+  value: Howdy!
+  area: America
+
